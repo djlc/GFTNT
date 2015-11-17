@@ -7,17 +7,17 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 
 @Mod(modid="gfTNT", name="GFTNT", version="1.0")
-public class SampleBlockCore {
+public class BlockGFTNT_MK1Core {
 
-	public static Block blockSample;
+	public static Block blockGFTNT_MK1Core;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
 		// ブロックのインスタンスを生成
-		blockSample = new SampleBlock();
+		blockGFTNT_MK1Core = new BlockGFTNT_MK1();
 
 		// ブロックの登録
-		GameRegistry.registerBlock(blockSample, "blockSample");
+		GameRegistry.registerBlock(blockGFTNT_MK1Core, "blockSample");
 	}
 }

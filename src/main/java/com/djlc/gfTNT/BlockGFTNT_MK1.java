@@ -9,10 +9,11 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class SampleBlock extends Block {
+public class BlockGFTNT_MK1 extends Block {
 
 	@SideOnly(Side.CLIENT)
 	private IIcon TopIcon;
@@ -20,7 +21,7 @@ public class SampleBlock extends Block {
 	@SideOnly(Side.CLIENT)
 	private IIcon SideIcon;
 
-	public SampleBlock() {
+	public BlockGFTNT_MK1() {
 		super(Material.rock);
 
 		// クリエイティブのタブ
@@ -45,7 +46,18 @@ public class SampleBlock extends Block {
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float posX, float posY, float posZ) {
 		// ブロックを右クリックした時の動作
-		return false;
+		final int r = 1;
+		for (int i = -r; i <= r; i++) {
+			for (int j = -r; j <= r; j++) {
+				for (int k = -r; k <= r; k++) {
+					if (world.getBlock(x + i, y + j, z + k) != Blocks.bedrock) {
+						if (i !=0 || j !=0 || k !=0) world.getBlock(x + i, y + j, z + k).dropBlockAsItem(world, x, y, z, 0, 0);
+						world.setBlockToAir(x + i, y + j, z + k);
+					}
+				}
+			}
+		}
+		return true;
 	}
 
 	@Override
