@@ -1,10 +1,10 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "gfTNT": "gfTNT",
+  "GFTNT": "GFTNT",
+  "description": "useful TNT mod.",
+  "version": "${1.0}",
+  "mcversion": "${1.7.10}",
   "url": "",
   "updateUrl": "",
   "authorList": ["ExampleDude"],
