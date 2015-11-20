@@ -85,8 +85,8 @@ public class BlockGFTNT_MK1 extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.TopIcon = par1IconRegister.registerIcon("gf_tnt:block_sample");
-		this.SideIcon = par1IconRegister.registerIcon("gf_tnt:block_sample");
+		this.TopIcon = par1IconRegister.registerIcon("gftnt:block_sample");
+		this.SideIcon = par1IconRegister.registerIcon("gftnt:block_sample");
 	}
 
 	@SideOnly(Side.CLIENT)
